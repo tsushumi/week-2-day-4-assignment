@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flowline — Sign up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="brand"><span class="brand-mark">F</span> Flowline</div>
+  <nav class="nav-links">
+    <a href="modal.html">Modals</a>
+    <a href="form.html" class="active">Form</a>
+    <a href="drag.html">Reorder</a>
+  </nav>
+  <div class="top-bar-right">
+    <div class="theme-toggle-wrap">
+      <span>Dark mode</span>
+      <label class="theme-toggle">
+        <input type="checkbox" data-theme-toggle />
+        <span class="toggle-track"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<main>
+  <p class="eyebrow">Task 2 · Form validation</p>
+  <h1 class="page-heading">Create your account</h1>
+  <p class="page-lede">Each field validates itself as you type. Sign up unlocks once every field is green.</p>
+
+  <form class="form-card" id="signup-form" novalidate>
+
+    <div class="form-field" data-field="name">
+      <label for="name">Full name</label>
+      <div class="input-wrap">
+        <input type="text" id="name" name="name" autocomplete="name" placeholder="Amara Wanjiru" />
+        <span class="field-icon icon-valid">✓</span>
+        <span class="field-icon icon-invalid">✗</span>
+      </div>
+      <p class="field-hint">At least 2 characters.</p>
+      <p class="field-message"></p>
+    </div>
+
+    <div class="form-field" data-field="email">
+      <label for="email">Email</label>
+      <div class="input-wrap">
+        <input type="text" id="email" name="email" autocomplete="email" placeholder="amara@example.com" />
+        <span class="field-icon icon-valid">✓</span>
+        <span class="field-icon icon-invalid">✗</span>
+      </div>
+      <p class="field-hint">Needs an @ and a dot after it.</p>
+      <p class="field-message"></p>
+    </div>
+
+    <div class="form-field" data-field="phone">
+      <label for="phone">Phone number</label>
+      <div class="input-wrap">
+        <input type="text" id="phone" name="phone" autocomplete="tel" placeholder="0712 345 678" />
+        <span class="field-icon icon-valid">✓</span>
+        <span class="field-icon icon-invalid">✗</span>
+      </div>
+      <p class="field-hint">10 digits, starting with 07 or 01.</p>
+      <p class="field-message"></p>
+    </div>
+
+    <div class="form-field" data-field="password">
+      <label for="password">Password</label>
+      <div class="input-wrap">
+        <input type="password" id="password" name="password" autocomplete="new-password" placeholder="••••••••" />
+        <span class="field-icon icon-valid">✓</span>
+        <span class="field-icon icon-invalid">✗</span>
+      </div>
+      <p class="field-hint">8+ characters, 1 uppercase letter, 1 number.</p>
+      <p class="field-message"></p>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block" id="submit-btn" disabled>Create account</button>
+    <p class="form-status" id="form-status">Account created — check your console for the submitted data.</p>
+  </form>
+</main>
+
+<footer class="page-footer">Flowline · Task 2</footer>
+
+<script src="form.js"></script>
+</body>
+</html>

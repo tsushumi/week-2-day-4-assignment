@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flowline — Reorder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="brand"><span class="brand-mark">F</span> Flowline</div>
+  <nav class="nav-links">
+    <a href="modal.html">Modals</a>
+    <a href="form.html">Form</a>
+    <a href="drag.html" class="active">Reorder</a>
+  </nav>
+  <div class="top-bar-right">
+    <div class="theme-toggle-wrap">
+      <span>Dark mode</span>
+      <label class="theme-toggle">
+        <input type="checkbox" data-theme-toggle />
+        <span class="toggle-track"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<main>
+  <p class="eyebrow">Task 3 · Drag &amp; drop</p>
+  <h1 class="page-heading">This week's priorities</h1>
+  <p class="page-lede">Drag any task by its handle and drop it where it belongs. A blue line shows where it'll land, and the numbers update the moment you let go.</p>
+
+  <ul class="priority-list" id="priority-list">
+    <li class="priority-item" draggable="true" data-id="deploy">
+      <span class="drag-handle">⠿</span>
+      <span class="badge-num">1</span>
+      <span class="priority-item-label">Deploy website</span>
+    </li>
+    <li class="priority-item" draggable="true" data-id="login-bug">
+      <span class="drag-handle">⠿</span>
+      <span class="badge-num">2</span>
+      <span class="priority-item-label">Fix login bug</span>
+    </li>
+    <li class="priority-item" draggable="true" data-id="tests">
+      <span class="drag-handle">⠿</span>
+      <span class="badge-num">3</span>
+      <span class="priority-item-label">Write tests</span>
+    </li>
+    <li class="priority-item" draggable="true" data-id="docs">
+      <span class="drag-handle">⠿</span>
+      <span class="badge-num">4</span>
+      <span class="priority-item-label">Update documentation</span>
+    </li>
+    <li class="priority-item" draggable="true" data-id="review">
+      <span class="drag-handle">⠿</span>
+      <span class="badge-num">5</span>
+      <span class="priority-item-label">Review PR feedback</span>
+    </li>
+  </ul>
+</main>
+
+<footer class="page-footer">Flowline · Task 3</footer>
+
+<script src="drag.js"></script>
+</body>
+</html>

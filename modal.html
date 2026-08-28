@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flowline — Modals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="theme.js"></script>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="brand"><span class="brand-mark">F</span> Flowline</div>
+  <nav class="nav-links">
+    <a href="modal.html" class="active">Modals</a>
+    <a href="form.html">Form</a>
+    <a href="drag.html">Reorder</a>
+  </nav>
+  <div class="top-bar-right">
+    <div class="theme-toggle-wrap">
+      <span>Dark mode</span>
+      <label class="theme-toggle">
+        <input type="checkbox" data-theme-toggle />
+        <span class="toggle-track"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<main>
+  <p class="eyebrow">Task 1 · Modal system</p>
+  <h1 class="page-heading">Three modals, one overlay pattern</h1>
+  <p class="page-lede">Each card opens its own centered modal over a dark overlay. Close it with the button, a click outside, or the Escape key — the page underneath won't scroll while it's open.</p>
+
+  <div class="card-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Smart Prioritization</h3>
+      <p>How Flowline decides what belongs at the top of your list.</p>
+      <button class="btn btn-ghost" data-open-modal="modal-priority">Learn more</button>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">✅</div>
+      <h3>Real-time Validation</h3>
+      <p>Instant feedback as you fill in a form, field by field.</p>
+      <button class="btn btn-ghost" data-open-modal="modal-validation">Learn more</button>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">↕️</div>
+      <h3>Seamless Reordering</h3>
+      <p>Drag, drop, and watch priorities renumber themselves.</p>
+      <button class="btn btn-ghost" data-open-modal="modal-reorder">Learn more</button>
+    </div>
+  </div>
+</main>
+
+<footer class="page-footer">Flowline  · Task 1</footer>
+
+<!-- Modal 1 -->
+<div class="modal-overlay" id="modal-priority" data-modal>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-priority-title">
+    <button class="modal-close-x" data-close-modal aria-label="Close">✕</button>
+    <p class="modal-eyebrow">Feature</p>
+    <h2 id="modal-priority-title">Smart Prioritization</h2>
+    <p>Flowline looks at due dates, dependencies, and how long a task has been sitting untouched, then quietly nudges the important stuff to the top of your list. You can always override it by hand — the drag list on the Reorder page is exactly that override.</p>
+    <div class="modal-footer">
+      <button class="btn btn-primary" data-close-modal>Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal-overlay" id="modal-validation" data-modal>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-validation-title">
+    <button class="modal-close-x" data-close-modal aria-label="Close">✕</button>
+    <p class="modal-eyebrow">Feature</p>
+    <h2 id="modal-validation-title">Real-time Validation</h2>
+    <p>Every field checks itself as you type — no waiting until you hit submit to find out your phone number is missing a digit. Green means go, red tells you exactly what to fix, and the submit button stays locked until everything checks out.</p>
+    <div class="modal-footer">
+      <button class="btn btn-primary" data-close-modal>Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal-overlay" id="modal-reorder" data-modal>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-reorder-title">
+    <button class="modal-close-x" data-close-modal aria-label="Close">✕</button>
+    <p class="modal-eyebrow">Feature</p>
+    <h2 id="modal-reorder-title">Seamless Reordering</h2>
+    <p>Pick up any task and drop it where it belongs. As you drag, a line shows exactly where it'll land, and the moment you let go, every priority number updates to match the new order.</p>
+    <div class="modal-footer">
+      <button class="btn btn-primary" data-close-modal>Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="modal.js"></script>
+</body>
+</html>
